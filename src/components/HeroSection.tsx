@@ -13,14 +13,14 @@ function HeroChannelLogo({ channel }: HeroChannelLogoProps) {
       <img
         src={channel.logoUrl}
         alt={channel.name}
-        className={`w-full h-full object-contain p-2 transition-opacity duration-300 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`w-full h-full object-contain p-4 transition-opacity duration-500 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
         onLoad={() => setImgLoaded(true)}
       />
     );
   }
 
   return (
-    <div className="w-full h-full flex items-center justify-center text-5xl font-bold text-tela-accent">
+    <div className="w-full h-full flex items-center justify-center text-7xl font-extrabold text-tela-text">
       {channel.name.charAt(0)}
     </div>
   );
@@ -59,43 +59,51 @@ export default function HeroSection({ featuredChannels, activeChannel, heroFocus
   return (
     <div
       data-hero
-      className={`relative w-full h-[220px] md:h-[350px] mb-8 overflow-hidden rounded-2xl md:rounded-3xl mx-2 md:mx-4 transition-all duration-300 ${
-        heroFocused ? 'ring-2 ring-tela-accent shadow-[0_0_30px_rgba(99,102,241,0.3)]' : ''
+      className={`relative w-full h-[300px] md:h-[480px] mb-12 overflow-hidden rounded-3xl md:rounded-[2rem] mx-2 md:mx-4 transition-all duration-200 ease-[cubic-bezier(0.25,0.1,0.25,1)] ${
+        heroFocused ? 'shadow-[0_16px_80px_rgba(0,0,0,0.7),0_0_0_1px_rgba(255,255,255,0.08)]' : ''
       }`}
     >
+      {/* Background blur */}
       <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-700"
+        className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
         style={{
           backgroundImage: heroChannel.logoUrl ? `url(${heroChannel.logoUrl})` : undefined,
-          filter: 'blur(60px) brightness(0.3) saturate(1.5)',
-          transform: 'scale(1.3)',
+          filter: 'blur(80px) brightness(0.25) saturate(1.3)',
+          transform: 'scale(1.4)',
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-tela-bg via-tela-bg/60 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-r from-tela-bg/80 to-transparent" />
 
-      <div className="relative z-10 h-full flex items-end p-4 md:p-10">
-        <div className="flex items-end gap-4 md:gap-8 max-w-4xl">
-          <div className="w-[80px] h-[80px] md:w-[140px] md:h-[140px] rounded-xl md:rounded-2xl overflow-hidden flex-shrink-0 bg-tela-surface border-2 border-white/10 shadow-2xl">
+      {/* Gradient overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-tela-bg via-tela-bg/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-tela-bg/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-tela-bg/30 via-transparent to-transparent" />
+
+      {/* Content */}
+      <div className="relative z-10 h-full flex items-end p-8 md:p-14">
+        <div className="flex items-end gap-6 md:gap-12 max-w-5xl">
+          {/* Logo */}
+          <div className="w-[100px] h-[100px] md:w-[180px] md:h-[180px] rounded-3xl md:rounded-[2rem] overflow-hidden flex-shrink-0 bg-tela-surface/80 backdrop-blur-xl shadow-2xl">
             <HeroChannelLogo key={heroChannel.id} channel={heroChannel} />
           </div>
+
+          {/* Info */}
           <div className="flex-1 min-w-0">
-            <p className="text-xs md:text-sm font-medium text-tela-accent mb-1 md:mb-2 uppercase tracking-widest">
+            <p className="text-sm md:text-base font-semibold text-tela-accent mb-2 md:mb-3 uppercase tracking-[0.25em]">
               Featured
             </p>
-            <h1 className="text-2xl md:text-5xl font-extrabold text-white mb-1 md:mb-3 tracking-tight leading-tight truncate">
+            <h1 className="text-4xl md:text-7xl font-extrabold text-tela-text mb-2 md:mb-5 tracking-tight leading-[1.1] truncate">
               {heroChannel.name}
             </h1>
-            <p className="text-sm md:text-lg text-tela-textMuted mb-3 md:mb-6">{heroChannel.category}</p>
+            <p className="text-lg md:text-2xl font-medium text-tela-textMuted mb-5 md:mb-10">{heroChannel.category}</p>
             <button
               onClick={handlePlay}
-              className={`btn btn-sm md:btn-lg border-none text-white font-semibold px-6 md:px-10 gap-2 md:gap-3 rounded-lg md:rounded-xl transition-all duration-200 ${
+              className={`flex items-center gap-3 md:gap-4 rounded-full md:rounded-2xl px-8 md:px-14 py-3 md:py-5 text-base md:text-xl font-bold transition-all duration-200 ${
                 heroFocused
-                  ? 'bg-tela-accentGlow shadow-[0_0_30px_rgba(99,102,241,0.4)] scale-105'
-                  : 'bg-tela-accent hover:bg-tela-accentGlow hover:shadow-[0_0_30px_rgba(99,102,241,0.4)]'
+                  ? 'bg-tela-accent text-white shadow-[0_8px_40px_rgba(10,132,255,0.35)] scale-105'
+                  : 'bg-tela-surface/80 text-tela-text backdrop-blur-xl hover:bg-tela-surface border border-tela-cardHover/50'
               }`}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-6 md:w-6" viewBox="0 0 24 24" fill="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-7 md:w-7" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z"/>
               </svg>
               Play Now
@@ -103,16 +111,17 @@ export default function HeroSection({ featuredChannels, activeChannel, heroFocus
           </div>
         </div>
 
+        {/* Pagination dots */}
         {featuredChannels.length > 1 && (
-          <div className="absolute bottom-4 md:bottom-6 right-4 md:right-10 flex gap-2">
+          <div className="absolute bottom-8 md:bottom-14 right-8 md:right-14 flex gap-3">
             {featuredChannels.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   idx === currentIndex
-                    ? 'bg-tela-accent w-6'
-                    : 'bg-white/30 hover:bg-white/50'
+                    ? 'bg-tela-accent w-8'
+                    : 'bg-tela-textMuted/30 hover:bg-tela-textMuted/50 w-2'
                 }`}
               />
             ))}

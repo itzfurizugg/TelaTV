@@ -6,7 +6,7 @@ export interface FocusPosition {
 }
 
 export function useTvNavigation(rowCount: number, getCardCount: (rowIndex: number) => number, hasHero: boolean = true) {
-  const [focus, setFocus] = useState<FocusPosition>({ rowIndex: 0, cardIndex: 0 });
+  const [focus, setFocus] = useState<FocusPosition>({ rowIndex: -1, cardIndex: 0 });
   const [isNavigating, setIsNavigating] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -20,25 +20,6 @@ export function useTvNavigation(rowCount: number, getCardCount: (rowIndex: numbe
   const clampRowIndex = useCallback((rowIndex: number): number => {
     return Math.max(0, Math.min(rowIndex, rowCount - 1));
   }, [rowCount]);
-
-  const scrollCardIntoView = useCallback((rowIndex: number, cardIndex: number) => {
-    if (rowIndex === -1) {
-      const hero = document.querySelector<HTMLElement>('[data-hero]');
-      if (hero) {
-        hero.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-      return;
-    }
-    const container = document.querySelector(`[data-row="${rowIndex}"]`);
-    const card = container?.querySelector(`[data-card="${cardIndex}"]`);
-    if (card) {
-      card.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center',
-      });
-    }
-  }, []);
 
   const navigate = useCallback((direction: 'left' | 'right' | 'up' | 'down') => {
     setFocus(prev => {
@@ -83,18 +64,16 @@ export function useTvNavigation(rowCount: number, getCardCount: (rowIndex: numbe
           break;
       }
 
-      setTimeout(() => scrollCardIntoView(newRow, newCard), 50);
       return { rowIndex: newRow, cardIndex: newCard };
     });
-  }, [clampRowIndex, clampCardIndex, getCardCount, scrollCardIntoView, hasHero]);
+  }, [clampRowIndex, clampCardIndex, getCardCount, hasHero]);
 
   const setFocusPosition = useCallback((rowIndex: number, cardIndex: number) => {
     setFocus({
       rowIndex: clampRowIndex(rowIndex),
       cardIndex: clampCardIndex(rowIndex, cardIndex),
     });
-    setTimeout(() => scrollCardIntoView(rowIndex, cardIndex), 50);
-  }, [clampRowIndex, clampCardIndex, scrollCardIntoView]);
+  }, [clampRowIndex, clampCardIndex]);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {

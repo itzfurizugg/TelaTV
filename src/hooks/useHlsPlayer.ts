@@ -67,7 +67,20 @@ export function useHlsPlayer(videoRef: React.RefObject<HTMLVideoElement | null>)
 
       hls.on(Hls.Events.MANIFEST_PARSED, () => {
         retryCountRef.current = 0;
-        video.play().catch(() => {});
+        video.muted = false;
+        video.play().catch(() => {
+          // Autoplay blocked - try muted then unmute on first interaction
+          video.muted = true;
+          video.play().then(() => {
+            const unmute = () => {
+              video.muted = false;
+              video.removeEventListener('click', unmute);
+              video.removeEventListener('keydown', unmute);
+            };
+            video.addEventListener('click', unmute, { once: true });
+            video.addEventListener('keydown', unmute, { once: true });
+          }).catch(() => {});
+        });
       });
 
       hls.on(Hls.Events.ERROR, (_event, data) => {
@@ -117,7 +130,19 @@ export function useHlsPlayer(videoRef: React.RefObject<HTMLVideoElement | null>)
       });
     } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
       video.src = url;
-      video.play().catch(() => {});
+      video.muted = false;
+      video.play().catch(() => {
+        video.muted = true;
+        video.play().then(() => {
+          const unmute = () => {
+            video.muted = false;
+            video.removeEventListener('click', unmute);
+            video.removeEventListener('keydown', unmute);
+          };
+          video.addEventListener('click', unmute, { once: true });
+          video.addEventListener('keydown', unmute, { once: true });
+        }).catch(() => {});
+      });
     } else {
       setStatus(s => ({
         ...s,
