@@ -1,0 +1,722 @@
+{
+  "summary": {
+    "total": 71,
+    "ok": 30,
+    "dead": 40,
+    "redirect": 0,
+    "unknown": 1,
+    "checkedAt": "2026-07-20T07:15:38.101Z"
+  },
+  "channels": [
+    {
+      "id": "iptv-org-trans7-720p-92",
+      "name": "Trans7 (720p)",
+      "streamUrl": "https://video.detik.com/trans7/smil:trans7.smil/index.m3u8",
+      "status": "DEAD",
+      "httpCode": 404,
+      "error": null,
+      "elapsedMs": 808,
+      "checkedAt": "2026-07-20T07:14:51.872Z"
+    },
+    {
+      "id": "iptv-org-trans-tv-720p-93",
+      "name": "Trans TV (720p)",
+      "streamUrl": "https://video.detik.com/transtv/smil:transtv.smil/index.m3u8",
+      "status": "DEAD",
+      "httpCode": 404,
+      "error": null,
+      "elapsedMs": 523,
+      "checkedAt": "2026-07-20T07:14:51.650Z"
+    },
+    {
+      "id": "iptv-org-tvri-1080i-99",
+      "name": "TVRI (1080i)",
+      "streamUrl": "https://ott-balancer.tvri.go.id/live/eds/Nasional/hls/Nasional.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1671,
+      "checkedAt": "2026-07-20T07:14:52.800Z"
+    },
+    {
+      "id": "iptv-org-tvri-jakarta-576i-not-24-7-105",
+      "name": "TVRI Jakarta (576i) [Not 24/7]",
+      "streamUrl": "https://ott-balancer.tvri.go.id/live/eds/DKI/hls/DKI.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 2840,
+      "checkedAt": "2026-07-20T07:14:53.970Z"
+    },
+    {
+      "id": "iptv-org-metro-tv-58",
+      "name": "Metro TV",
+      "streamUrl": "https://edge.medcom.id/live-edge/smil:metro.smil/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 2874,
+      "checkedAt": "2026-07-20T07:14:54.005Z"
+    },
+    {
+      "id": "iptv-org-cnbc-indonesia-720p-20",
+      "name": "CNBC Indonesia (720p)",
+      "streamUrl": "https://live.cnbcindonesia.com/livecnbc/smil:cnbctv.smil/master.m3u8",
+      "status": "DEAD",
+      "httpCode": 404,
+      "error": null,
+      "elapsedMs": 5660,
+      "checkedAt": "2026-07-20T07:14:56.792Z"
+    },
+    {
+      "id": "free-tv-cnn-indonesia-845",
+      "name": "CNN Indonesia",
+      "streamUrl": "http://live.cnnindonesia.com/livecnn/smil:cnntv.smil/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 4039,
+      "checkedAt": "2026-07-20T07:14:55.172Z"
+    },
+    {
+      "id": "iptv-org-mdtv-1080p-57",
+      "name": "MDTV (1080p)",
+      "streamUrl": "https://wahyu1ptv.pages.dev/MDTV-HD.m3u8",
+      "status": "DEAD",
+      "httpCode": 404,
+      "error": null,
+      "elapsedMs": 2910,
+      "checkedAt": "2026-07-20T07:14:54.044Z"
+    },
+    {
+      "id": "iptv-org-dtvi-26",
+      "name": "dTVi",
+      "streamUrl": "https://e.siar.us/live/dtvi.m3u8",
+      "status": "DEAD",
+      "httpCode": 404,
+      "error": null,
+      "elapsedMs": 732,
+      "checkedAt": "2026-07-20T07:14:51.867Z"
+    },
+    {
+      "id": "iptv-org-rri-net-1080p-73",
+      "name": "RRI Net (1080p)",
+      "streamUrl": "https://private-streaming.rri.go.id/memfs/6f77c7b5-feb2-4935-9f89-e7e9fca0a54a_output_0.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1323,
+      "checkedAt": "2026-07-20T07:14:52.459Z"
+    },
+    {
+      "id": "iptv-org-elshinta-tv-28",
+      "name": "Elshinta TV",
+      "streamUrl": "https://ams.juraganstreaming.com:5443/LiveApp/streams/elshintatv.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "fetch failed",
+      "elapsedMs": 145,
+      "checkedAt": "2026-07-20T07:14:56.940Z"
+    },
+    {
+      "id": "iptv-org-jtv-720p-45",
+      "name": "JTV (720p)",
+      "streamUrl": "http://122.248.43.242:1935/JTVSURABAYA/_definst_/myStream/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1389,
+      "checkedAt": "2026-07-20T07:14:58.189Z"
+    },
+    {
+      "id": "iptv-org-jawa-pos-tv-jakarta-720p-39",
+      "name": "Jawa Pos TV Jakarta (720p)",
+      "streamUrl": "http://122.248.43.242:1935/JAWAPOSTVJKT/_definst_/myStream/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 3585,
+      "checkedAt": "2026-07-20T07:15:00.389Z"
+    },
+    {
+      "id": "iptv-org-jawa-pos-tv-semarang-720p-42",
+      "name": "Jawa Pos TV Semarang (720p)",
+      "streamUrl": "http://122.248.43.242:1935/JAWAPOSTVSEMARANG/_definst_/myStream/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": 404,
+      "error": null,
+      "elapsedMs": 3582,
+      "checkedAt": "2026-07-20T07:15:00.387Z"
+    },
+    {
+      "id": "iptv-org-nusantara-tv-1080p-65",
+      "name": "Nusantara TV (1080p)",
+      "streamUrl": "https://nusantaratv.siar.us/nusantaratv/live/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 691,
+      "checkedAt": "2026-07-20T07:14:57.497Z"
+    },
+    {
+      "id": "iptv-org-garuda-tv-1080p-32",
+      "name": "Garuda TV (1080p)",
+      "streamUrl": "https://hgmtv.com:19360/garudatvlivestreaming/garudatvlivestreaming.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1377,
+      "checkedAt": "2026-07-20T07:14:58.187Z"
+    },
+    {
+      "id": "free-tv-beritasatu-846",
+      "name": "BeritaSatu",
+      "streamUrl": "https://b1news.beritasatumedia.com/Beritasatu/B1News_1280x720.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "fetch failed",
+      "elapsedMs": 188,
+      "checkedAt": "2026-07-20T07:14:57.002Z"
+    },
+    {
+      "id": "iptv-org-bandung-tv-360p-9",
+      "name": "Bandung TV (360p)",
+      "streamUrl": "http://202.150.153.254:65500/bandungtvWEBSITE.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1374,
+      "checkedAt": "2026-07-20T07:14:58.191Z"
+    },
+    {
+      "id": "iptv-org-jogja-tv-720p-not-24-7-44",
+      "name": "Jogja TV (720p) [Not 24/7]",
+      "streamUrl": "https://stream.jogjatv.co.id/jtvlive/stream/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1653,
+      "checkedAt": "2026-07-20T07:14:58.471Z"
+    },
+    {
+      "id": "iptv-org-kilisuci-tv-52",
+      "name": "Kilisuci TV",
+      "streamUrl": "https://5bf7b725107e5.streamlock.net/kstv/kstv/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1365,
+      "checkedAt": "2026-07-20T07:14:58.184Z"
+    },
+    {
+      "id": "iptv-org-dm-tv-malang-24",
+      "name": "DM TV Malang",
+      "streamUrl": "https://e.siar.us/live/dmtv.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 251,
+      "checkedAt": "2026-07-20T07:15:00.640Z"
+    },
+    {
+      "id": "iptv-org-balikpapan-tv-720p-8",
+      "name": "Balikpapan TV (720p)",
+      "streamUrl": "http://122.248.43.242:1935/BALIKPAPANTV/_definst_/myStream/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 239,
+      "checkedAt": "2026-07-20T07:15:00.632Z"
+    },
+    {
+      "id": "iptv-org-duta-tv-360p-not-24-7-27",
+      "name": "Duta TV (360p) [Not 24/7]",
+      "streamUrl": "https://dutatv.siar.us/dutatv/live/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 2558,
+      "checkedAt": "2026-07-20T07:15:02.952Z"
+    },
+    {
+      "id": "iptv-org-celebes-tv-not-24-7-19",
+      "name": "Celebes TV [Not 24/7]",
+      "streamUrl": "https://ams.juraganstreaming.com:5443/LiveApp/streams/celebesmedia.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "fetch failed",
+      "elapsedMs": 63,
+      "checkedAt": "2026-07-20T07:15:00.460Z"
+    },
+    {
+      "id": "iptv-org-tvku-720p-97",
+      "name": "TVKU (720p)",
+      "streamUrl": "https://tvku.tv/hlsstream/hls/live.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1331,
+      "checkedAt": "2026-07-20T07:15:01.729Z"
+    },
+    {
+      "id": "iptv-org-rodja-tv-720p-72",
+      "name": "Rodja TV (720p)",
+      "streamUrl": "https://rodjatv.com/rodjatv/live.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1096,
+      "checkedAt": "2026-07-20T07:15:01.496Z"
+    },
+    {
+      "id": "iptv-org-mqtv-720p-not-24-7-60",
+      "name": "MQTV (720p) [Not 24/7]",
+      "streamUrl": "https://5bf7b725107e5.streamlock.net/mqtv/mqtv/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1320,
+      "checkedAt": "2026-07-20T07:15:01.722Z"
+    },
+    {
+      "id": "iptv-org-nabawi-tv-720p-62",
+      "name": "Nabawi TV (720p)",
+      "streamUrl": "http://202.150.161.117:8000/play/NabawiTV",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 545,
+      "checkedAt": "2026-07-20T07:15:00.949Z"
+    },
+    {
+      "id": "iptv-org-al-bahjah-tv-1080p-1",
+      "name": "Al-Bahjah TV (1080p)",
+      "streamUrl": "http://202.150.161.117:8000/play/AlBahjahTV",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 550,
+      "checkedAt": "2026-07-20T07:15:00.955Z"
+    },
+    {
+      "id": "iptv-org-al-iman-tv-720p-2",
+      "name": "Al-Iman TV (720p)",
+      "streamUrl": "https://tv.aliman.id/aliman/live.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1852,
+      "checkedAt": "2026-07-20T07:15:02.257Z"
+    },
+    {
+      "id": "iptv-org-ashiil-tv-480p-5",
+      "name": "Ashiil TV (480p)",
+      "streamUrl": "https://wahyu1ptv.pages.dev/AshiilTV-HD.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8004,
+      "checkedAt": "2026-07-20T07:15:10.956Z"
+    },
+    {
+      "id": "iptv-org-mgi-tv-720p-geo-blocked-59",
+      "name": "MGI TV (720p) [Geo-blocked]",
+      "streamUrl": "https://tv.rodja.live/tasik/ngrp:mgitv_all/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8002,
+      "checkedAt": "2026-07-20T07:15:10.957Z"
+    },
+    {
+      "id": "iptv-org-madani-tv-720p-54",
+      "name": "Madani TV (720p)",
+      "streamUrl": "https://stream.asianastream.com/madani/madanitv.smil/playlist.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 7077,
+      "checkedAt": "2026-07-20T07:15:10.036Z"
+    },
+    {
+      "id": "iptv-org-surau-tv-720p-87",
+      "name": "Surau TV (720p)",
+      "streamUrl": "https://surautv.siar.us/live/surautv.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:10.966Z"
+    },
+    {
+      "id": "iptv-org-izzah-tv-480p-34",
+      "name": "Izzah TV (480p)",
+      "streamUrl": "https://streaming.radiosalamjambi.com/izzahtv.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:10.968Z"
+    },
+    {
+      "id": "iptv-org-alwafa-tarim-tv-am-media-720p-3",
+      "name": "Alwafa Tarim TV (Am Media) (720p)",
+      "streamUrl": "https://ammedia.siar.us/ammedia/live/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:10.969Z"
+    },
+    {
+      "id": "iptv-org-ahsan-tv-0",
+      "name": "Ahsan TV",
+      "streamUrl": "https://5bf7b725107e5.streamlock.net/ahsantv/ahsantv/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:10.970Z"
+    },
+    {
+      "id": "iptv-org-salam-tv-1080p-76",
+      "name": "Salam TV (1080p)",
+      "streamUrl": "https://salamtv.siar.us/live/salamtv.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:10.973Z"
+    },
+    {
+      "id": "iptv-org-dmi-tv-576i-25",
+      "name": "DMI TV (576i)",
+      "streamUrl": "https://tvstreamcast.com/tawaftv.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:10.975Z"
+    },
+    {
+      "id": "free-tv-al-jazeera-1973",
+      "name": "Al Jazeera العربية",
+      "streamUrl": "https://live-hls-web-aja.getaj.net/AJA/index.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:10.979Z"
+    },
+    {
+      "id": "free-tv-al-arabiya-1974",
+      "name": "Al Arabiya العربية",
+      "streamUrl": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:18.980Z"
+    },
+    {
+      "id": "free-tv-al-hadath-1975",
+      "name": "Al Hadath العربية",
+      "streamUrl": "https://live.alarabiya.net/alarabiapublish/alhadath.smil/alarabiapublish/alhadath_1080p/chunks.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:18.981Z"
+    },
+    {
+      "id": "free-tv-sky-news-arabia-1871",
+      "name": "Sky News Arabia",
+      "streamUrl": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:18.984Z"
+    },
+    {
+      "id": "free-tv-al-jazeera-1984",
+      "name": "Al Jazeera",
+      "streamUrl": "https://live-hls-apps-aje-fa.getaj.net/AJE/index.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 7999,
+      "checkedAt": "2026-07-20T07:15:18.985Z"
+    },
+    {
+      "id": "free-tv-bbc-news-1986",
+      "name": "BBC News Ⓖ",
+      "streamUrl": "https://vs-hls-push-uk.live.fastly.md.bbci.co.uk/x=4/i=urn:bbc:pips:service:bbc_news_channel_hd/iptv_hd_abr_v1.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:18.987Z"
+    },
+    {
+      "id": "free-tv-cnn-international-2005",
+      "name": "CNN International",
+      "streamUrl": "https://turnerlive.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 7999,
+      "checkedAt": "2026-07-20T07:15:18.988Z"
+    },
+    {
+      "id": "doms9-cnbc-164",
+      "name": "CNBC",
+      "streamUrl": "http://206.212.244.63/41/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 2916,
+      "checkedAt": "2026-07-20T07:15:13.908Z"
+    },
+    {
+      "id": "doms9-bloomberg-tv-150",
+      "name": "Bloomberg TV",
+      "streamUrl": "https://www.bloomberg.com/media-manifest/streams/us.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:18.993Z"
+    },
+    {
+      "id": "free-tv-france-24-653",
+      "name": "France 24",
+      "streamUrl": "https://www.youtube.com/c/FRANCE24/live",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:18.993Z"
+    },
+    {
+      "id": "free-tv-france-24-1976",
+      "name": "France 24 العربية Ⓨ",
+      "streamUrl": "https://www.youtube.com/c/FRANCE24Arabic/live",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:18.994Z"
+    },
+    {
+      "id": "free-tv-dw-1983",
+      "name": "DW",
+      "streamUrl": "https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:26.995Z"
+    },
+    {
+      "id": "free-tv-dw-1977",
+      "name": "DW العربية",
+      "streamUrl": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/index.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:26.996Z"
+    },
+    {
+      "id": "free-tv-euronews-1982",
+      "name": "Euronews Ⓨ",
+      "streamUrl": "https://www.youtube.com/euronews/live",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:26.999Z"
+    },
+    {
+      "id": "free-tv-cgtn-1985",
+      "name": "CGTN",
+      "streamUrl": "https://news.cgtn.com/resource/live/english/cgtn-news.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:26.999Z"
+    },
+    {
+      "id": "free-tv-cgtn-1978",
+      "name": "CGTN العربية",
+      "streamUrl": "https://arabic-livews.cgtn.com/hls/LSveq57bErWLinBnxosqjisZ220802LSTefTAS9zc9mpU08y3np9TH220802cd/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:27.000Z"
+    },
+    {
+      "id": "free-tv-rt-1979",
+      "name": "RT العربية",
+      "streamUrl": "https://rt-arb.rttv.com/dvr/rtarab/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:27.001Z"
+    },
+    {
+      "id": "free-tv-metro-globe-network-1996",
+      "name": "Metro Globe Network",
+      "streamUrl": "https://edge.medcom.id/live-edge/smil:mgnch.smil/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:27.004Z"
+    },
+    {
+      "id": "iptv-org-jakarta-globe-news-channel-1080p-35",
+      "name": "Jakarta Globe News Channel (1080p)",
+      "streamUrl": "https://jktglobe.secureswiftcontent.com/han/jktglobe/jktglober/srtoutput/manifest.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:27.004Z"
+    },
+    {
+      "id": "iptv-org-huma-betang-tv-720p-not-24-7-33",
+      "name": "Huma Betang TV (720p) [Not 24/7]",
+      "streamUrl": "https://v3.siar.us/humabetangtv/live/playlist.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:27.005Z"
+    },
+    {
+      "id": "iptv-org-nick-jr-indonesia-720p-63",
+      "name": "Nick Jr. Indonesia (720p)",
+      "streamUrl": "http://103.137.83.62:9090/play/27/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 2007,
+      "checkedAt": "2026-07-20T07:15:21.013Z"
+    },
+    {
+      "id": "iptv-org-nickelodeon-asia-indonesia-720p-64",
+      "name": "Nickelodeon Asia Indonesia (720p)",
+      "streamUrl": "http://103.137.83.62:9090/play/28/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 187,
+      "checkedAt": "2026-07-20T07:15:27.192Z"
+    },
+    {
+      "id": "doms9-cartoon-network-156",
+      "name": "Cartoon Network",
+      "streamUrl": "http://23.237.104.106:8080/USA_CARTOON_NETWORK/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1605,
+      "checkedAt": "2026-07-20T07:15:28.611Z"
+    },
+    {
+      "id": "doms9-boomerang-151",
+      "name": "Boomerang",
+      "streamUrl": "http://23.237.104.106:8080/USA_BOOMERANG/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 701,
+      "checkedAt": "2026-07-20T07:15:27.707Z"
+    },
+    {
+      "id": "doms9-disney-channel-180",
+      "name": "Disney Channel",
+      "streamUrl": "http://206.212.244.63/650/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 703,
+      "checkedAt": "2026-07-20T07:15:27.709Z"
+    },
+    {
+      "id": "doms9-disney-jr-181",
+      "name": "Disney Jr",
+      "streamUrl": "http://206.212.244.63/655/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 1542,
+      "checkedAt": "2026-07-20T07:15:28.549Z"
+    },
+    {
+      "id": "doms9-disney-xd-182",
+      "name": "Disney XD",
+      "streamUrl": "http://23.237.104.106:8080/USA_DISNEY_XD/index.m3u8",
+      "status": "OK",
+      "httpCode": 200,
+      "error": null,
+      "elapsedMs": 691,
+      "checkedAt": "2026-07-20T07:15:27.698Z"
+    },
+    {
+      "id": "iptv-org-biznet-kids-1080p-15",
+      "name": "Biznet Kids (1080p)",
+      "streamUrl": "http://livestream.biznetvideo.net/biznet_kids/smil:kids.smil/index.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:35.008Z"
+    },
+    {
+      "id": "iptv-org-kids-tv-1080p-51",
+      "name": "Kids TV (1080p)",
+      "streamUrl": "http://de.russkoe-iptv.com:88/s/s-e3dc39e0/kids-tv-hd.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:35.010Z"
+    },
+    {
+      "id": "iptv-org-my-kidz-720p-61",
+      "name": "My Kidz (720p)",
+      "streamUrl": "https://cdn10jtedge.indihometv.com/atm/DASH/mykids/manifest.mpd",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8001,
+      "checkedAt": "2026-07-20T07:15:35.010Z"
+    },
+    {
+      "id": "iptv-org-vtv-1080p-133",
+      "name": "VTV (1080p)",
+      "streamUrl": "http://103.66.62.83:8000/play/a00c/index.m3u8",
+      "status": "DEAD",
+      "httpCode": null,
+      "error": "This operation was aborted",
+      "elapsedMs": 8000,
+      "checkedAt": "2026-07-20T07:15:35.010Z"
+    },
+    {
+      "id": "doms9-adult-swim-138",
+      "name": "Adult Swim",
+      "streamUrl": "https://turnerlive.warnermediacdn.com/hls/live/2023183/aseast/noslate/VIDEO_1_5128000.m3u8",
+      "status": "UNKNOWN",
+      "httpCode": 403,
+      "error": null,
+      "elapsedMs": 3091,
+      "checkedAt": "2026-07-20T07:15:38.101Z"
+    }
+  ]
+}

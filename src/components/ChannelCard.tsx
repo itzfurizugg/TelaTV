@@ -117,6 +117,13 @@ export default function ChannelCard({
           </span>
         )}
 
+        {/* Offline badge */}
+        {channel.verified === false && (
+          <span className="absolute right-2.5 top-2.5 md:right-4 md:top-4 flex items-center gap-1.5 border border-white/40 px-2.5 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider text-white/60">
+            Offline
+          </span>
+        )}
+
         {/* Blue focus indicator line */}
         <div
           className={`absolute bottom-0 left-0 right-0 h-[3px] md:h-1 bg-tela-accent transition-all duration-200 ease-out ${
