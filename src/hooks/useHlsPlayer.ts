@@ -54,10 +54,19 @@ export function useHlsPlayer(videoRef: React.RefObject<HTMLVideoElement | null>)
     if (Hls.isSupported()) {
       const hls = new Hls({
         enableWorker: true,
-        lowLatencyMode: true,
+        lowLatencyMode: false,
         maxBufferLength: 30,
         maxMaxBufferLength: 60,
         startFragPrefetch: true,
+        manifestLoadingMaxRetry: 3,
+        manifestLoadingRetryDelay: 1000,
+        manifestLoadingMaxRetryTimeout: 10000,
+        levelLoadingMaxRetry: 3,
+        levelLoadingRetryDelay: 1000,
+        levelLoadingMaxRetryTimeout: 10000,
+        fragLoadingMaxRetry: 3,
+        fragLoadingRetryDelay: 500,
+        fragLoadingMaxRetryTimeout: 5000,
       });
 
       hlsRef.current = hls;
@@ -69,7 +78,6 @@ export function useHlsPlayer(videoRef: React.RefObject<HTMLVideoElement | null>)
         retryCountRef.current = 0;
         video.muted = false;
         video.play().catch(() => {
-          // Autoplay blocked - try muted then unmute on first interaction
           video.muted = true;
           video.play().then(() => {
             const unmute = () => {
@@ -93,7 +101,7 @@ export function useHlsPlayer(videoRef: React.RefObject<HTMLVideoElement | null>)
               } else {
                 setStatus(s => ({
                   ...s,
-                  error: 'Stream unavailable — the channel may be offline or geo-blocked.',
+                  error: 'Stream tidak tersedia saat ini',
                 }));
                 destroy();
               }
@@ -166,7 +174,7 @@ export function useHlsPlayer(videoRef: React.RefObject<HTMLVideoElement | null>)
     }));
     const onError = () => setStatus(s => ({
       ...s,
-      error: 'Channel failed to load — it may be offline or geo-blocked.',
+      error: 'Stream tidak tersedia saat ini',
       isBuffering: false,
     }));
 

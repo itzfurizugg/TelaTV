@@ -7,6 +7,8 @@ export interface Channel {
   tvgId: string | null;
   isFeatured?: boolean;
   sortOrder?: number;
+  needsProxy?: boolean;
+  verified?: boolean;
 }
 
 export interface CategoryGroup {
