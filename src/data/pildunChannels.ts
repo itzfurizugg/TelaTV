@@ -9,7 +9,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/117163",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 1
+    "sortOrder": 1,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-1-720p-1",
@@ -19,7 +20,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/117166",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 2
+    "sortOrder": 2,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-1-1080p-2",
@@ -29,7 +31,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/120008",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 3
+    "sortOrder": 3,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-2-3",
@@ -39,7 +42,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/120010",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 4
+    "sortOrder": 4,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-2-720p-4",
@@ -49,7 +53,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/117162",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 5
+    "sortOrder": 5,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-2-1080p-5",
@@ -59,7 +64,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/120009",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 6
+    "sortOrder": 6,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-3-720p-6",
@@ -69,7 +75,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/120012",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 7
+    "sortOrder": 7,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-3-1080p-7",
@@ -79,7 +86,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/120011",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 8
+    "sortOrder": 8,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-4-720p-8",
@@ -89,7 +97,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135343",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 9
+    "sortOrder": 9,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-4-1080p-9",
@@ -99,7 +108,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135342",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 10
+    "sortOrder": 10,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-5-1080p-10",
@@ -109,7 +119,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135344",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 11
+    "sortOrder": 11,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-6-1080p-11",
@@ -119,7 +130,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135345",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 12
+    "sortOrder": 12,
+    verified: false,
   },
   {
     "id": "pildun-bein-sports-max-10-1080p-12",
@@ -129,7 +141,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135349",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 13
+    "sortOrder": 13,
+    verified: false,
   },
   {
     "id": "pildun-sbs-720p-13",
@@ -139,7 +152,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/30000",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 14
+    "sortOrder": 14,
+    verified: false,
   },
   {
     "id": "pildun-itv-1-14",
@@ -149,7 +163,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1984",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 15
+    "sortOrder": 15,
+    verified: false,
   },
   {
     "id": "pildun-itv-1-15",
@@ -159,7 +174,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1985",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 16
+    "sortOrder": 16,
+    verified: false,
   },
   {
     "id": "pildun-itv2-1-16",
@@ -169,7 +185,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1981",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 17
+    "sortOrder": 17,
+    verified: false,
   },
   {
     "id": "pildun-itv2-720p-17",
@@ -179,7 +196,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1983",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 18
+    "sortOrder": 18,
+    verified: false,
   },
   {
     "id": "pildun-itv2-18",
@@ -189,7 +207,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1982",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 19
+    "sortOrder": 19,
+    verified: false,
   },
   {
     "id": "pildun-itv3-1-19",
@@ -199,7 +218,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1978",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 20
+    "sortOrder": 20,
+    verified: false,
   },
   {
     "id": "pildun-itv3-20",
@@ -209,7 +229,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1979",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 21
+    "sortOrder": 21,
+    verified: false,
   },
   {
     "id": "pildun-itv4-1-21",
@@ -219,7 +240,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1975",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 22
+    "sortOrder": 22,
+    verified: false,
   },
   {
     "id": "pildun-itv4-22",
@@ -229,7 +251,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1976",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 23
+    "sortOrder": 23,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1-1080p-23",
@@ -239,7 +262,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/44239",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 24
+    "sortOrder": 24,
+    verified: false,
   },
   {
     "id": "pildun-tsn-2-1080p-24",
@@ -249,7 +273,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/45389",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 25
+    "sortOrder": 25,
+    verified: false,
   },
   {
     "id": "pildun-tsn-3-1080p-25",
@@ -259,7 +284,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/45388",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 26
+    "sortOrder": 26,
+    verified: false,
   },
   {
     "id": "pildun-tsn-4-1080p-26",
@@ -269,7 +295,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/45387",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 27
+    "sortOrder": 27,
+    verified: false,
   },
   {
     "id": "pildun-tsn-5-1080p-27",
@@ -279,7 +306,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/45386",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 28
+    "sortOrder": 28,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1-720p-28",
@@ -289,7 +317,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/579",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 29
+    "sortOrder": 29,
+    verified: false,
   },
   {
     "id": "pildun-tsn-2-720p-29",
@@ -299,7 +328,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/580",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 30
+    "sortOrder": 30,
+    verified: false,
   },
   {
     "id": "pildun-tsn-3-720p-30",
@@ -309,7 +339,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/581",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 31
+    "sortOrder": 31,
+    verified: false,
   },
   {
     "id": "pildun-tsn-4-720p-31",
@@ -319,7 +350,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/582",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 32
+    "sortOrder": 32,
+    verified: false,
   },
   {
     "id": "pildun-tsn-5-720p-32",
@@ -329,7 +361,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/583",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 33
+    "sortOrder": 33,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1080p-1-33",
@@ -339,7 +372,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/17181",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 34
+    "sortOrder": 34,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1080p-2-34",
@@ -349,7 +383,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/17180",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 35
+    "sortOrder": 35,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1080p-3-35",
@@ -359,7 +394,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/17179",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 36
+    "sortOrder": 36,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1080p-4-36",
@@ -369,7 +405,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/17178",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 37
+    "sortOrder": 37,
+    verified: false,
   },
   {
     "id": "pildun-tsn-1080p-5-37",
@@ -379,7 +416,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/17177",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 38
+    "sortOrder": 38,
+    verified: false,
   },
   {
     "id": "pildun-fox-720p-38",
@@ -389,7 +427,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/512",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 39
+    "sortOrder": 39,
+    verified: false,
   },
   {
     "id": "pildun-fox-720p-vip-39",
@@ -399,7 +438,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/8987",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 40
+    "sortOrder": 40,
+    verified: false,
   },
   {
     "id": "pildun-supersport-football-720p-40",
@@ -409,7 +449,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/111459",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 41
+    "sortOrder": 41,
+    verified: false,
   },
   {
     "id": "pildun-supersport-maximo-1-720p-41",
@@ -419,7 +460,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/111453",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 42
+    "sortOrder": 42,
+    verified: false,
   },
   {
     "id": "pildun-vtv-1-42",
@@ -429,7 +471,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/7097",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 43
+    "sortOrder": 43,
+    verified: false,
   },
   {
     "id": "pildun-vtv1-720p-43",
@@ -439,7 +482,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/13714",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 44
+    "sortOrder": 44,
+    verified: false,
   },
   {
     "id": "pildun-vtv6-720p-44",
@@ -449,7 +493,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/13730",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 45
+    "sortOrder": 45,
+    verified: false,
   },
   {
     "id": "pildun-vtv7-720p-45",
@@ -459,7 +504,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/13725",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 46
+    "sortOrder": 46,
+    verified: false,
   },
   {
     "id": "pildun-vtv8-720p-46",
@@ -469,7 +515,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/13692",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 47
+    "sortOrder": 47,
+    verified: false,
   },
   {
     "id": "pildun-vtv9-720p-47",
@@ -479,7 +526,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/13723",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 48
+    "sortOrder": 48,
+    verified: false,
   },
   {
     "id": "pildun-hrt-1-48",
@@ -489,7 +537,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/201",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 49
+    "sortOrder": 49,
+    verified: false,
   },
   {
     "id": "pildun-hrt-2-49",
@@ -499,7 +548,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/202",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 50
+    "sortOrder": 50,
+    verified: false,
   },
   {
     "id": "pildun-hrt-3-50",
@@ -509,7 +559,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/203",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 51
+    "sortOrder": 51,
+    verified: false,
   },
   {
     "id": "pildun-hrt-4-51",
@@ -519,7 +570,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/204",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 52
+    "sortOrder": 52,
+    verified: false,
   },
   {
     "id": "pildun-sigma-52",
@@ -529,7 +581,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/2231",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 53
+    "sortOrder": 53,
+    verified: false,
   },
   {
     "id": "pildun-sigma-live-720p-53",
@@ -539,7 +592,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/12689",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 54
+    "sortOrder": 54,
+    verified: false,
   },
   {
     "id": "pildun-nova-action-720p-54",
@@ -549,7 +603,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/6836",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 55
+    "sortOrder": 55,
+    verified: false,
   },
   {
     "id": "pildun-etv-2-720p-55",
@@ -559,7 +614,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/5762",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 56
+    "sortOrder": 56,
+    verified: false,
   },
   {
     "id": "pildun-ptv-sports-56",
@@ -569,7 +625,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1139",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 57
+    "sortOrder": 57,
+    verified: false,
   },
   {
     "id": "pildun-ptv-sports-vip-57",
@@ -579,7 +636,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/43650",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 58
+    "sortOrder": 58,
+    verified: false,
   },
   {
     "id": "pildun-tvp-sport-1080p-58",
@@ -589,7 +647,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/10421",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 59
+    "sortOrder": 59,
+    verified: false,
   },
   {
     "id": "pildun-fussball-tv-1-720p-59",
@@ -599,7 +658,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135364",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 60
+    "sortOrder": 60,
+    verified: false,
   },
   {
     "id": "pildun-fussball-tv-1-1080p-60",
@@ -609,7 +669,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135363",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 61
+    "sortOrder": 61,
+    verified: false,
   },
   {
     "id": "pildun-fussball-tv-1-4k-2160p-61",
@@ -619,7 +680,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135362",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 62
+    "sortOrder": 62,
+    verified: false,
   },
   {
     "id": "pildun-fussball-tv-2-720p-62",
@@ -629,7 +691,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135366",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 63
+    "sortOrder": 63,
+    verified: false,
   },
   {
     "id": "pildun-fussball-tv-2-1080p-63",
@@ -639,7 +702,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135365",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 64
+    "sortOrder": 64,
+    verified: false,
   },
   {
     "id": "pildun-fussball-tv-3-720p-64",
@@ -649,7 +713,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/135367",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 65
+    "sortOrder": 65,
+    verified: false,
   },
   {
     "id": "pildun-sabc-3-65",
@@ -659,7 +724,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/111399",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 66
+    "sortOrder": 66,
+    verified: false,
   },
   {
     "id": "pildun-m6-1080p-66",
@@ -669,7 +735,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/6489",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 67
+    "sortOrder": 67,
+    verified: false,
   },
   {
     "id": "pildun-m6-67",
@@ -679,7 +746,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/431",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 68
+    "sortOrder": 68,
+    verified: false,
   },
   {
     "id": "pildun-m6-720p-68",
@@ -689,7 +757,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/432",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 69
+    "sortOrder": 69,
+    verified: false,
   },
   {
     "id": "pildun-azam-sport-4-720p-69",
@@ -699,7 +768,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/125964",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 70
+    "sortOrder": 70,
+    verified: false,
   },
   {
     "id": "pildun-azam-sport-3-720p-70",
@@ -709,7 +779,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/125963",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 71
+    "sortOrder": 71,
+    verified: false,
   },
   {
     "id": "pildun-azam-sport-2-720p-71",
@@ -719,7 +790,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/125962",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 72
+    "sortOrder": 72,
+    verified: false,
   },
   {
     "id": "pildun-azam-sport-1-720p-72",
@@ -729,7 +801,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/125961",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 73
+    "sortOrder": 73,
+    verified: false,
   },
   {
     "id": "pildun-trt-1-720p-73",
@@ -739,7 +812,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/478",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 74
+    "sortOrder": 74,
+    verified: false,
   },
   {
     "id": "pildun-trt-1-1080p-74",
@@ -749,7 +823,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/6115",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 75
+    "sortOrder": 75,
+    verified: false,
   },
   {
     "id": "pildun-trt-spor-720p-75",
@@ -759,7 +834,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/476",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 76
+    "sortOrder": 76,
+    verified: false,
   },
   {
     "id": "pildun-trt-spor-1080p-76",
@@ -769,7 +845,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/6122",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 77
+    "sortOrder": 77,
+    verified: false,
   },
   {
     "id": "pildun-trt-spor-2-1080p-77",
@@ -779,7 +856,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/80920",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 78
+    "sortOrder": 78,
+    verified: false,
   },
   {
     "id": "pildun-trt-spor-2-720p-78",
@@ -789,7 +867,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/80921",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 79
+    "sortOrder": 79,
+    verified: false,
   },
   {
     "id": "pildun-trt-spor-3-79",
@@ -799,7 +878,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/118089",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 80
+    "sortOrder": 80,
+    verified: false,
   },
   {
     "id": "pildun-trt-4k-ultra-80",
@@ -809,7 +889,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/110703",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 81
+    "sortOrder": 81,
+    verified: false,
   },
   {
     "id": "pildun-trt-1080p-81",
@@ -819,7 +900,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/48634",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 82
+    "sortOrder": 82,
+    verified: false,
   },
   {
     "id": "pildun-trt-4k-2160p-82",
@@ -829,7 +911,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/62515",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 83
+    "sortOrder": 83,
+    verified: false,
   },
   {
     "id": "pildun-trt-4k-2160p-4k-83",
@@ -839,7 +922,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/15067",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 84
+    "sortOrder": 84,
+    verified: false,
   },
   {
     "id": "pildun-trt-2-1080p-84",
@@ -849,7 +933,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/48632",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 85
+    "sortOrder": 85,
+    verified: false,
   },
   {
     "id": "pildun-tyc-sports-1080p-85",
@@ -859,7 +944,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/11642",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 86
+    "sortOrder": 86,
+    verified: false,
   },
   {
     "id": "pildun-servus-tv-1080p-86",
@@ -869,7 +955,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/73829",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 87
+    "sortOrder": 87,
+    verified: false,
   },
   {
     "id": "pildun-crtv-sports-1080p-87",
@@ -879,7 +966,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/10338",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 88
+    "sortOrder": 88,
+    verified: false,
   },
   {
     "id": "pildun-crtv-1080p-88",
@@ -889,7 +977,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/10326",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 89
+    "sortOrder": 89,
+    verified: false,
   },
   {
     "id": "pildun-rush-sports-2-1080p-89",
@@ -899,7 +988,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/93879",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 90
+    "sortOrder": 90,
+    verified: false,
   },
   {
     "id": "pildun-caracol-720p-90",
@@ -909,7 +999,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/11311",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 91
+    "sortOrder": 91,
+    verified: false,
   },
   {
     "id": "pildun-caracol-1080p-91",
@@ -919,7 +1010,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/5383",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 92
+    "sortOrder": 92,
+    verified: false,
   },
   {
     "id": "pildun-ct-sports-1080p-92",
@@ -929,7 +1021,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/16364",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 93
+    "sortOrder": 93,
+    verified: false,
   },
   {
     "id": "pildun-tvri-sports-1080p-93",
@@ -939,7 +1032,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "https://pildun.cob.web.id/av1-master.m3u8",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 94
+    "sortOrder": 94,
+    verified: false,
   },
   {
     "id": "pildun-bbc-one-720p-94",
@@ -949,7 +1043,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/1999",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 95
+    "sortOrder": 95,
+    verified: false,
   },
   {
     "id": "pildun-bbc-one-1080p-95",
@@ -959,7 +1054,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/10769",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 96
+    "sortOrder": 96,
+    verified: false,
   },
   {
     "id": "pildun-bnt-3-1080p-96",
@@ -969,7 +1065,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/2186",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 97
+    "sortOrder": 97,
+    verified: false,
   },
   {
     "id": "pildun-svt-1-720p-97",
@@ -979,7 +1076,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/9152",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 98
+    "sortOrder": 98,
+    verified: false,
   },
   {
     "id": "pildun-tve-la-1-720p-98",
@@ -989,7 +1087,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/126747",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 99
+    "sortOrder": 99,
+    verified: false,
   },
   {
     "id": "pildun-tvp-1-1080p-99",
@@ -999,7 +1098,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/107246",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 100
+    "sortOrder": 100,
+    verified: false,
   },
   {
     "id": "pildun-antena-1-1080p-100",
@@ -1009,7 +1109,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/74118",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 101
+    "sortOrder": 101,
+    verified: false,
   },
   {
     "id": "pildun-match-1080p-101",
@@ -1019,7 +1120,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/4772",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 102
+    "sortOrder": 102,
+    verified: false,
   },
   {
     "id": "pildun-npo-1-1080p-102",
@@ -1029,7 +1131,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/364",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 103
+    "sortOrder": 103,
+    verified: false,
   },
   {
     "id": "pildun-arena-premium-1-1080p-103",
@@ -1039,7 +1142,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/103221",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 104
+    "sortOrder": 104,
+    verified: false,
   },
   {
     "id": "pildun-rtbf-tipik-1080p-104",
@@ -1049,7 +1153,8 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/128336",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 105
+    "sortOrder": 105,
+    verified: false,
   },
   {
     "id": "pildun-ictimai-tv-1080p-105",
@@ -1059,6 +1164,7 @@ export const pildunChannels: Channel[] = [
     "streamUrl": "http://38hacibaba38.gentv.to:8080/Am1N5pY12/M4rr14gE/78633",
     "tvgId": null,
     "isFeatured": false,
-    "sortOrder": 106
+    "sortOrder": 106,
+    verified: false,
   }
 ];

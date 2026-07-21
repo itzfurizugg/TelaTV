@@ -177,10 +177,17 @@ export default function IPTVPlayer({ channel, onBack }: IPTVPlayerProps) {
   }, [destroy]);
 
   useEffect(() => {
+    if (channel.needsTranscode) {
+      setStatus(s => ({
+        ...s,
+        error: 'Format stream tidak didukung — coba channel lain.',
+      }));
+      return;
+    }
     const url = getProxiedUrl(channel.streamUrl, channel.needsProxy);
     loadSource(url);
     return () => destroy();
-  }, [channel.streamUrl, channel.needsProxy, loadSource, destroy]);
+  }, [channel.streamUrl, channel.needsProxy, channel.needsTranscode, loadSource, destroy]);
 
   const toggleFullscreen = useCallback(() => {
     const container = containerRef.current;

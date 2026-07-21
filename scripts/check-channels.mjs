@@ -5,28 +5,49 @@ import * as path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const CHANNELS_PATH = path.resolve(__dirname, '../src/data/channels.ts');
+const CHANNELS_PATHS = [
+  path.resolve(__dirname, '../src/data/channels.ts'),
+  path.resolve(__dirname, '../src/data/pildunChannels.ts'),
+];
 const REPORT_PATH = path.resolve(__dirname, 'channel-health-report.json');
-const TIMEOUT_MS = 8000;
-const CONCURRENCY = 10;
+const TIMEOUT_MS = 5000;
+const CONCURRENCY = 25;
+
+const KEY_RE = /(["']?)(\w+)\1\s*:\s*["']([^"']+)["']/g;
 
 function parseChannelsFromTs(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
   const channels = [];
 
-  const streamUrlRegex = /streamUrl:\s*["']([^"']+)["']/g;
-  const idRegex = /id:\s*["']([^"']+)["']/g;
-  const nameRegex = /name:\s*["']([^"']+)["']/g;
+  const ids = [];
+  const names = [];
+  const urls = [];
 
-  const ids = [...content.matchAll(idRegex)].map(m => m[1]);
-  const names = [...content.matchAll(nameRegex)].map(m => m[1]);
-  const urls = [...content.matchAll(streamUrlRegex)].map(m => m[1]);
+  let match;
+  KEY_RE.lastIndex = 0;
+  while ((match = KEY_RE.exec(content)) !== null) {
+    const key = match[2];
+    const value = match[3];
+    if (key === 'id') ids.push(value);
+    else if (key === 'name') names.push(value);
+    else if (key === 'streamUrl') urls.push(value);
+  }
+
+  function classifyFormat(url) {
+    try {
+      const pathname = new URL(url).pathname;
+      if (pathname.endsWith('.m3u8')) return 'hls';
+      if (pathname.endsWith('.mpd')) return 'dash';
+    } catch {}
+    return 'raw_ts_or_unknown';
+  }
 
   for (let i = 0; i < urls.length; i++) {
     channels.push({
       id: ids[i] || `unknown-${i}`,
       name: names[i] || `Channel ${i}`,
       streamUrl: urls[i],
+      format: classifyFormat(urls[i]),
     });
   }
 
@@ -63,6 +84,7 @@ async function checkUrl(channel) {
       id: channel.id,
       name: channel.name,
       streamUrl: channel.streamUrl,
+      format: channel.format,
       status,
       httpCode: response.status,
       error: null,
@@ -87,6 +109,7 @@ async function checkUrl(channel) {
       id: channel.id,
       name: channel.name,
       streamUrl: channel.streamUrl,
+      format: channel.format,
       status,
       httpCode: null,
       error: message,
@@ -99,14 +122,20 @@ async function checkUrl(channel) {
 async function main() {
   console.log('=== Channel Health Check ===\n');
 
-  if (!fs.existsSync(CHANNELS_PATH)) {
-    console.error(`Channels file not found: ${CHANNELS_PATH}`);
-    process.exit(1);
+  let channels = [];
+
+  for (const filePath of CHANNELS_PATHS) {
+    if (!fs.existsSync(filePath)) {
+      console.warn(`Skipping (not found): ${filePath}`);
+      continue;
+    }
+    console.log(`Reading: ${filePath}`);
+    const parsed = parseChannelsFromTs(filePath);
+    console.log(`  Found ${parsed.length} channels`);
+    channels.push(...parsed);
   }
 
-  console.log(`Reading channels from: ${CHANNELS_PATH}`);
-  const channels = parseChannelsFromTs(CHANNELS_PATH);
-  console.log(`Found ${channels.length} channels\n`);
+  console.log(`\nTotal channels found: ${channels.length}\n`);
 
   if (channels.length === 0) {
     console.error('No channels found to check.');
@@ -132,7 +161,8 @@ async function main() {
         default: unknownCount++;
       }
       const icon = r.status === 'OK' ? '✓' : r.status === 'DEAD' ? '✗' : r.status === 'REDIRECT' ? '→' : '?';
-      console.log(`  ${icon} [${r.status}] ${r.name} (${r.httpCode || r.error || 'N/A'})`);
+      const fmt = r.format === 'hls' ? '' : ` [${r.format}]`;
+      console.log(`  ${icon} [${r.status}]${fmt} ${r.name} (${r.httpCode || r.error || 'N/A'})`);
     }
   }
 

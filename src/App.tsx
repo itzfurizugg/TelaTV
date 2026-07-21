@@ -21,6 +21,7 @@ function App() {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [playerChannel, setPlayerChannel] = useState<Channel | null>(null);
   const [selectedChannel, setSelectedChannel] = useState<Channel | null>(null);
+  const [heroIndex, setHeroIndex] = useState(0);
   const [showSplash, setShowSplash] = useState(true);
   const [showWelcome, setShowWelcome] = useState(() => {
     return !localStorage.getItem('tela-welcomed');
@@ -48,19 +49,30 @@ function App() {
     return null;
   }, [focus, filteredCategories]);
 
-  const heroChannel = selectedChannel ?? focusedChannel;
-
-  const handleSelectChannel = useCallback((channel: Channel) => {
-    setSelectedChannel(channel);
-  }, []);
+  const heroChannel = useMemo(() => {
+    if (selectedChannel?.isFeatured) return selectedChannel;
+    if (focusedChannel?.isFeatured) return focusedChannel;
+    return featuredChannels[heroIndex] ?? null;
+  }, [selectedChannel, focusedChannel, heroIndex]);
 
   const handlePlayFullscreen = useCallback((channel: Channel) => {
     setPlayerChannel(channel);
     setIsFullscreen(true);
+    if (document.fullscreenEnabled) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    }
   }, []);
+
+  const handleSelectChannel = useCallback((channel: Channel) => {
+    setSelectedChannel(channel);
+    handlePlayFullscreen(channel);
+  }, [handlePlayFullscreen]);
 
   const handleBackFromPlayer = useCallback(() => {
     setIsFullscreen(false);
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
   }, []);
 
   const handleDismissWelcome = useCallback(() => {
@@ -92,6 +104,8 @@ function App() {
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
+      const target = e.target;
+      if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) return;
       if (e.key === 'Enter' && !isFullscreen && !showSplash && !showWelcome) {
         e.preventDefault();
         if (heroFocused && heroChannel) {
@@ -139,6 +153,8 @@ function App() {
             featuredChannels={featuredChannels}
             activeChannel={heroChannel}
             heroFocused={heroFocused}
+            heroIndex={heroIndex}
+            onHeroIndexChange={setHeroIndex}
             onPlay={handlePlayFullscreen}
           />
         )}

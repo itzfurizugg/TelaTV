@@ -77,6 +77,9 @@ export function useTvNavigation(rowCount: number, getCardCount: (rowIndex: numbe
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
+      const target = e.target;
+      if (target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement) return;
+
       switch (e.key) {
         case 'ArrowLeft':
           e.preventDefault();

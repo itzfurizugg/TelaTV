@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "check:channels": "node scripts/check-channels.mjs"
+    "check:channels": "node scripts/check-channels.mjs",
+    "sync:health": "node scripts/apply-health-report.mjs"
   },
   "dependencies": {
     "hls.js": "^1.6.16",

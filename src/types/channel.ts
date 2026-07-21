@@ -8,6 +8,7 @@ export interface Channel {
   isFeatured?: boolean;
   sortOrder?: number;
   needsProxy?: boolean;
+  needsTranscode?: boolean;
   verified?: boolean;
 }
 

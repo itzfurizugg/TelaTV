@@ -109,18 +109,28 @@ export default function ChannelCard({
           </p>
         </div>
 
-        {/* LIVE badge */}
+        {/* Now Playing badge — shown when this channel is the active playback */}
         {isActive && (
-          <span className="absolute right-2.5 top-2.5 md:right-4 md:top-4 flex items-center gap-1.5 rounded-full bg-red-500 px-2.5 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider text-white">
+          <span className="absolute right-2.5 top-2.5 md:right-4 md:top-4 z-10 flex items-center gap-1.5 rounded-full bg-red-500 px-2.5 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider text-white shadow-lg">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-white" />
-            Live
+            Now Playing
           </span>
         )}
 
-        {/* Offline badge */}
+        {/* Offline badge — stream confirmed dead by health check */}
         {channel.verified === false && (
-          <span className="absolute right-2.5 top-2.5 md:right-4 md:top-4 flex items-center gap-1.5 border border-white/40 px-2.5 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider text-white/60">
+          <span className="absolute left-2.5 top-2.5 md:left-4 md:top-4 flex items-center gap-1.5 border border-white/30 px-2.5 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider text-white/50">
             Offline
+          </span>
+        )}
+
+        {/* Online indicator — stream confirmed working */}
+        {channel.verified === true && (
+          <span className="absolute bottom-3 left-3 md:bottom-4 md:left-4 flex items-center gap-1.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-green-400 shadow-[0_0_4px_rgba(74,222,128,0.6)]" />
+            <span className="text-[10px] md:text-xs font-semibold uppercase tracking-wider text-green-400/80">
+              Online
+            </span>
           </span>
         )}
 

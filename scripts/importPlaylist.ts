@@ -39,6 +39,7 @@ interface Channel {
   tvgId: string | null;
   isFeatured: boolean;
   sortOrder: number;
+  needsProxy?: boolean;
 }
 
 interface RawChannel {
@@ -48,6 +49,104 @@ interface RawChannel {
   streamUrl: string;
   tvgId: string | null;
   source: string;
+}
+
+// --- CORS-restrictive domains (matched at import time) ---
+
+const CORS_RESTRICTIVE_DOMAINS = [
+  'live.cnbcindonesia.com',
+  'live.cnnindonesia.com',
+  'b1news.beritasatumedia.com',
+  'video.detik.com',
+  'edge.medcom.id',
+  'streamlock.net',
+  '.siar.us',
+  'juraganstreaming.com',
+  'tv.aliman.id',
+  'hgmtv.com',
+  'tvku.tv',
+  'tv.rodja.live',
+  'stream.asianastream.com',
+  'streaming.radiosalamjambi.com',
+  'ammedia.siar.us',
+  'salamtv.siar.us',
+  'tvstreamcast.com',
+  'nusantaratv.siar.us',
+  'dutatv.siar.us',
+  'surautv.siar.us',
+  'e.siar.us',
+];
+
+function needsProxy(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    if (parsed.protocol === 'http:') return true;
+    const hostname = parsed.hostname.toLowerCase();
+    return CORS_RESTRICTIVE_DOMAINS.some(p => hostname === p || hostname.endsWith('.' + p));
+  } catch {
+    return false;
+  }
+}
+
+// --- Existing file data (for --append mode) ---
+
+interface ExistingData {
+  header: string;
+  entries: string[];
+  footer: string;
+  existingTvgIds: Set<string>;
+  existingNames: Set<string>;
+}
+
+function readExistingFile(filePath: string): ExistingData | null {
+  if (!fs.existsSync(filePath)) return null;
+
+  const content = fs.readFileSync(filePath, 'utf-8');
+  const arrStart = content.indexOf('[');
+  const arrEnd = content.lastIndexOf(']');
+  if (arrStart === -1 || arrEnd === -1) return null;
+
+  const header = content.slice(0, arrStart + 1);
+  const arrayContent = content.slice(arrStart + 1, arrEnd);
+  const footer = content.slice(arrEnd);
+
+  const entries: string[] = [];
+  const existingTvgIds = new Set<string>();
+  const existingNames = new Set<string>();
+
+  let braceDepth = 0;
+  let currentEntry = '';
+
+  for (const line of arrayContent.split('\n')) {
+    const trimmed = line.trim();
+    if (trimmed === '{') {
+      if (braceDepth === 0) {
+        currentEntry = line;
+      } else {
+        currentEntry += '\n' + line;
+      }
+      braceDepth++;
+    } else if (trimmed === '},' || trimmed === '}') {
+      braceDepth--;
+      currentEntry += '\n' + line;
+      if (braceDepth === 0) {
+        entries.push(currentEntry);
+        const tvgIdMatch = currentEntry.match(/tvgId:\s*(null|"[^"]*")/);
+        const nameMatch = currentEntry.match(/name:\s*"([^"]+)"/);
+        if (tvgIdMatch && tvgIdMatch[1] !== 'null') {
+          existingTvgIds.add(tvgIdMatch[1].replace(/"/g, ''));
+        }
+        if (nameMatch) {
+          existingNames.add(nameMatch[1].toLowerCase().trim());
+        }
+        currentEntry = '';
+      }
+    } else if (braceDepth > 0) {
+      currentEntry += '\n' + line;
+    }
+  }
+
+  return { header, entries, footer, existingTvgIds, existingNames };
 }
 
 // --- Source URLs ---
@@ -73,6 +172,7 @@ interface CliArgs {
   freeTvUrls: string[];
   customUrls: string[];
   outputFile: string;
+  append: boolean;
 }
 
 function parseArgs(): CliArgs {
@@ -84,6 +184,7 @@ function parseArgs(): CliArgs {
   const customUrls: string[] = [];
   let outputFile = path.resolve(process.cwd(), 'src/data/channels.ts');
   let doms9Mode: 'base' | 'live' | 'combined' | null = null;
+  let append = false;
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -146,6 +247,10 @@ function parseArgs(): CliArgs {
         outputFile = path.resolve(process.cwd(), out);
         break;
       }
+      case '--append':
+      case '-a':
+        append = true;
+        break;
       case '--help':
       case '-h':
         console.log(`
@@ -169,6 +274,7 @@ doms9 options:
 General:
   -u, --url <url>           Custom M3U URL (can be repeated)
   -o, --output <path>       Output file path  [default: src/data/channels.ts]
+  -a, --append              Append to existing file instead of overwriting
   -h, --help                Show this help
 
 Examples:
@@ -204,7 +310,7 @@ Examples:
     freeTvUrls.push(FREE_TV_URL);
   }
 
-  return { source, iptvOrgUrl, doms9Urls, freeTvUrls, customUrls, outputFile };
+  return { source, iptvOrgUrl, doms9Urls, freeTvUrls, customUrls, outputFile, append };
 }
 
 // --- M3U Parsing ---
@@ -317,7 +423,31 @@ function generateId(name: string, index: number): string {
 
 // --- File Generation ---
 
-function generateChannelFile(channels: Channel[]): string {
+function generateChannelFile(channels: Channel[], existing?: ExistingData | null): string {
+  if (existing) {
+    const lines: string[] = [existing.header.trim()];
+    for (const entry of existing.entries) {
+      lines.push(entry);
+    }
+    for (const ch of channels) {
+      lines.push('  {');
+      lines.push(`    id: ${JSON.stringify(ch.id)},`);
+      lines.push(`    name: ${JSON.stringify(ch.name)},`);
+      lines.push(`    logoUrl: ${JSON.stringify(ch.logoUrl)},`);
+      lines.push(`    category: ${JSON.stringify(ch.category)},`);
+      lines.push(`    streamUrl: ${JSON.stringify(ch.streamUrl)},`);
+      lines.push(`    tvgId: ${JSON.stringify(ch.tvgId)},`);
+      lines.push(`    isFeatured: ${ch.isFeatured},`);
+      lines.push(`    sortOrder: ${ch.sortOrder},`);
+      if (ch.needsProxy) {
+        lines.push(`    needsProxy: true,`);
+      }
+      lines.push('  },');
+    }
+    lines.push(existing.footer.trim());
+    return lines.join('\n');
+  }
+
   const lines: string[] = [
     "import type { Channel } from '../types/channel';",
     '',
@@ -334,6 +464,9 @@ function generateChannelFile(channels: Channel[]): string {
     lines.push(`    tvgId: ${JSON.stringify(ch.tvgId)},`);
     lines.push(`    isFeatured: ${ch.isFeatured},`);
     lines.push(`    sortOrder: ${ch.sortOrder},`);
+    if (ch.needsProxy) {
+      lines.push(`    needsProxy: true,`);
+    }
     lines.push('  },');
   }
 
@@ -417,17 +550,50 @@ async function main() {
   console.log(`Total raw entries: ${allRaw.length}`);
   console.log('Filtering invalid streams and deduplicating...');
   const filtered = filterAndDeduplicate(allRaw);
-  console.log(`After filtering: ${filtered.length} channels.`);
+  console.log(`After internal dedup: ${filtered.length} channels.`);
 
   if (filtered.length === 0) {
     console.error('No valid channels found.');
     process.exit(1);
   }
 
+  // Append mode: read existing file and dedupe against it
+  let existingData: ExistingData | null = null;
+  if (args.append) {
+    existingData = readExistingFile(args.outputFile);
+    if (existingData) {
+      const before = filtered.length;
+      const deduped: RawChannel[] = [];
+      for (const ch of filtered) {
+        if (ch.tvgId && existingData.existingTvgIds.has(ch.tvgId)) continue;
+        const normalizedName = ch.name.toLowerCase().trim();
+        if (existingData.existingNames.has(normalizedName)) continue;
+        deduped.push(ch);
+      }
+      console.log(`Deduped against ${existingData.entries.length} existing channels: ${deduped.length} new (${before - deduped.length} duplicates skipped).`);
+      if (deduped.length === 0) {
+        console.log('No new channels to append.');
+        process.exit(0);
+      }
+      // Replace filtered with deduped
+      filtered.length = 0;
+      filtered.push(...deduped);
+    } else {
+      console.log('No existing file found — will create new.');
+    }
+  }
+
   console.log('Assigning IDs and categories...');
   const channels = assignChannels(filtered);
 
-  const fileContent = generateChannelFile(channels);
+  // Mark CORS-prone channels at import time
+  for (const ch of channels) {
+    if (needsProxy(ch.streamUrl)) {
+      ch.needsProxy = true;
+    }
+  }
+
+  const fileContent = generateChannelFile(channels, existingData);
 
   const outputDir = path.dirname(args.outputFile);
   if (!fs.existsSync(outputDir)) {
@@ -435,7 +601,10 @@ async function main() {
   }
 
   fs.writeFileSync(args.outputFile, fileContent, 'utf-8');
-  console.log(`\nWritten ${channels.length} channels to: ${args.outputFile}`);
+  const totalMsg = existingData
+    ? `\nAppended ${channels.length} new channels to: ${args.outputFile} (total: ${existingData.entries.length + channels.length})`
+    : `\nWritten ${channels.length} channels to: ${args.outputFile}`;
+  console.log(totalMsg);
 
   const categoryMap = new Map<string, number>();
   for (const ch of channels) {

@@ -30,25 +30,25 @@ interface HeroSectionProps {
   featuredChannels: Channel[];
   activeChannel: Channel | null;
   heroFocused: boolean;
+  heroIndex: number;
+  onHeroIndexChange: (index: number) => void;
   onPlay: (channel: Channel) => void;
 }
 
-export default function HeroSection({ featuredChannels, activeChannel, heroFocused, onPlay }: HeroSectionProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+export default function HeroSection({ featuredChannels, activeChannel, heroFocused, heroIndex, onHeroIndexChange, onPlay }: HeroSectionProps) {
   const heroChannel = activeChannel && activeChannel.isFeatured
     ? activeChannel
-    : featuredChannels[currentIndex] ?? null;
+    : featuredChannels[heroIndex] ?? null;
 
   useEffect(() => {
     if (featuredChannels.length <= 1) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % featuredChannels.length);
+      onHeroIndexChange((heroIndex + 1) % featuredChannels.length);
     }, 8000);
 
     return () => clearInterval(interval);
-  }, [featuredChannels.length]);
+  }, [featuredChannels.length, heroIndex, onHeroIndexChange]);
 
   const handlePlay = useCallback(() => {
     if (heroChannel) onPlay(heroChannel);
@@ -117,9 +117,9 @@ export default function HeroSection({ featuredChannels, activeChannel, heroFocus
             {featuredChannels.map((_, idx) => (
               <button
                 key={idx}
-                onClick={() => setCurrentIndex(idx)}
+                onClick={() => onHeroIndexChange(idx)}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  idx === currentIndex
+                  idx === heroIndex
                     ? 'bg-tela-accent w-8'
                     : 'bg-tela-textMuted/30 hover:bg-tela-textMuted/50 w-2'
                 }`}
