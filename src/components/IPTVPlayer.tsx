@@ -220,6 +220,13 @@ export default function IPTVPlayer({ channel, onBack }: IPTVPlayerProps) {
   }, [status.isBuffering]);
 
   useEffect(() => {
+    const container = containerRef.current;
+    if (container && document.fullscreenEnabled && !document.fullscreenElement) {
+      container.requestFullscreen().catch(() => {});
+    }
+  }, []);
+
+  useEffect(() => {
     const handler = () => resetControlsTimer();
     window.addEventListener('mousemove', handler);
     window.addEventListener('keydown', handler);

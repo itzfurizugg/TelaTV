@@ -58,9 +58,6 @@ function App() {
   const handlePlayFullscreen = useCallback((channel: Channel) => {
     setPlayerChannel(channel);
     setIsFullscreen(true);
-    if (document.fullscreenEnabled) {
-      document.documentElement.requestFullscreen().catch(() => {});
-    }
   }, []);
 
   const handleSelectChannel = useCallback((channel: Channel) => {

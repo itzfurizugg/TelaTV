@@ -1,7 +1,8 @@
 {
   "functions": {
     "api/stream-proxy.ts": {
-      "runtime": "edge"
+      "runtime": "@vercel/edge@1",
+      "maxDuration": 10
     }
   },
   "rewrites": [
