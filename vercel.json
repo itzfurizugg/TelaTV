@@ -1,10 +1,4 @@
 {
-  "functions": {
-    "api/stream-proxy.ts": {
-      "runtime": "@vercel/edge@1",
-      "maxDuration": 10
-    }
-  },
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
